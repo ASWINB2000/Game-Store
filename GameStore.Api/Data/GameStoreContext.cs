@@ -8,4 +8,15 @@ public class GameStoreContext(DbContextOptions<GameStoreContext>options): DbCont
 {
     public DbSet<Game> Games => Set<Game>();
     public DbSet<Genre> Genres =>Set<Genre>();
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Genre>().HasData(
+            new { Id = 1,Name ="Fighting"},
+            new { Id = 2,Name ="Roleplaying"},
+            new { Id = 3,Name ="Sports"},
+            new { Id = 4,Name ="Esports"},
+            new { Id = 5,Name ="Racing"}
+        );  
+    }
 }

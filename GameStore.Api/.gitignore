@@ -487,3 +487,8 @@ $RECYCLE.BIN/
 *.exe
 *.pdb
 *.cache
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
